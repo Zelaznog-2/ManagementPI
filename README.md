@@ -38,4 +38,9 @@ npm run dev
 ```
 Este comando iniciará el servidor de desarrollo en el puerto 3000. Accede a [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
 
+### Estructura del proyecto
+- src: Contiene el código fuente de la aplicación.
+- .env: Contiene las variables de entorno de la aplicación.
 
+### Comandos útiles
+- npm run build: Genera una versión de producción de la aplicación.
