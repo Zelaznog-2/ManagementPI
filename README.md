@@ -1,32 +1,41 @@
 # Management PI
 
-## Configuración rápida
+## Configuración
 
-1 - Primero parte
+1 - Clonar el repositorio:
 Ejecta este comando para instalar los paquetes
+```bash
+git clone https://github.com/Zelaznog-2/ManagementPI
+cd ManagementPI
+```
+
+2 - Instalar dependencias:
+
 ```bash
 npm install -f
 ```
 
-2 - Segunda parte
+3 - Configurar variables de entorno:
+- Renombrar el archivo: Cambia el nombre del archivo .env.example a .env.
+- Configurar la base de datos:
+  - URL de conexión: Reemplaza la URL de conexión de la base de datos en el archivo .env con la de tu instancia de PostgresSql.
+  - Credenciales: Asegúrate de que las credenciales de acceso a la base de datos (usuario, contraseña) sean correctas.
+- API key de Resend: Si utilizas Resend para enviar correos, agrega tu API key en la sección correspondiente del archivo .env.
 
-```
-Debes modificar el nombre archivo .env-example a .env
-Ya una vez esa parte lista, modifica la dirección de la url de la base de datos con la de tu configuración
-y también agrega la api key se resend para habilitar el correo
-```
 
-3 - Tercera parte
-Una vez lo de arriba vas a escribir los comando para crear las tablas de la base de datos
+3 - Crear las tablas de la base de datos:
 ```bash
 npm run db:generate
 # and
 npm run db:migrate
 ```
+Este comando ejecutará las migraciones necesarias para crear las tablas en tu base de datos.
 
-4 - Cuarta
-Ejecuta el siguiente comando para abir esta url [http://localhost:3000](http://localhost:3000) y ver lo resultado de la aplicación
+
+4 - Ejecutar la aplicación
 ```bash
 npm run dev
 ```
+Este comando iniciará el servidor de desarrollo en el puerto 3000. Accede a [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
+
 
